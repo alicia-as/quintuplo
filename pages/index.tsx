@@ -1,12 +1,22 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
 import { Sport } from "../types/sports";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 const Home: NextPage<{ sports: Sport[] }> = ({ sports }) => {
   const [isClicked, setIsClicked] = useState(false);
+  const [numberOfSports, setNumberOfSports] = useState(1);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setNumberOfSports(numberOfSports + 1);
+    }, 5000);
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, [numberOfSports]);
 
   return (
     <div className={styles.container}>
@@ -25,16 +35,23 @@ const Home: NextPage<{ sports: Sport[] }> = ({ sports }) => {
 
         <button
           className={styles.button}
-          onClick={() => setIsClicked(!isClicked)}
+          onClick={() => {
+            setIsClicked(!isClicked);
+            setNumberOfSports(1);
+          }}
         >
           Generer quintuplo
         </button>
 
         <div className={styles.grid}>
           {isClicked &&
-            sports.map((sport) => {
+            sports.slice(0, numberOfSports).map((sport) => {
               return (
-                <a href="https://nextjs.org/docs" className={styles.card}>
+                <a
+                  href={`https://google.com/search?q=${sport.title}`}
+                  className={styles.card}
+                  key={sport.id}
+                >
                   <h2>{sport.title} &rarr;</h2>
                   <div className={styles.goalExplainerBox}>
                     <div className={styles.goalExplainerBoxElement}>
