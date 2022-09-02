@@ -73,6 +73,21 @@
   max-width: 80%;  
 }
 
+.goalExplainerBox {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.goalExplainerBoxElement {
+  margin-right: 10px;
+}
+
+.goalExplainerBox p {
+  font-size: xx-small;
+}
+
 .card {
   margin: 1rem;
   padding: 1.5rem;
@@ -126,4 +141,18 @@
   .logo img {
     filter: invert(1);
   }
+}
+
+.button {
+  padding: 15px 30px 15px 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: large;
+  background-color: royalblue;
+  transition: transform 0.5s;
+}
+
+.button:hover { 
+  transform: scale(0.95);
+  cursor: pointer;
 }

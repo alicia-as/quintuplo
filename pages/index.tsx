@@ -1,12 +1,12 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
+import { useState } from "react";
 import styles from "../styles/Home.module.css";
+import { Sport } from "../types/sports";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
-const Home: NextPage = () => {
-  // Here we'll do a fetch to some backend.
-  // Dummy data for now to illustrate the point :)
-  const sports = ["Lorem", "Ipsum", "Dolor", "Catana", "Banana"];
+const Home: NextPage<{ sports: Sport[] }> = ({ sports }) => {
+  const [isClicked, setIsClicked] = useState(false);
 
   return (
     <div className={styles.container}>
@@ -23,15 +23,33 @@ const Home: NextPage = () => {
 
         <p className={styles.description}>Månedens sporter er...</p>
 
+        <button
+          className={styles.button}
+          onClick={() => setIsClicked(!isClicked)}
+        >
+          Generer quintuplo
+        </button>
+
         <div className={styles.grid}>
-          {sports.map((sport) => {
-            return (
-              <a href="https://nextjs.org/docs" className={styles.card}>
-                <h2>{sport} &rarr;</h2>
-                <p>Litt marketing om sporten.</p>
-              </a>
-            );
-          })}
+          {isClicked &&
+            sports.map((sport) => {
+              return (
+                <a href="https://nextjs.org/docs" className={styles.card}>
+                  <h2>{sport.title} &rarr;</h2>
+                  <div className={styles.goalExplainerBox}>
+                    <div className={styles.goalExplainerBoxElement}>
+                      {sport.emoji}
+                    </div>
+                    <div className={styles.goalExplainerBoxElement}>Mål:</div>
+                    <div className={styles.goalExplainerBoxElement}>
+                      {sport.mål}
+                    </div>
+                  </div>
+
+                  <p>{sport.marketing}</p>
+                </a>
+              );
+            })}
         </div>
       </main>
 
@@ -41,5 +59,22 @@ const Home: NextPage = () => {
     </div>
   );
 };
+
+// This function gets called at build time on server-side.
+// It won't be called on client-side, so you can even do
+// direct database queries.
+export async function getStaticProps() {
+  // Call an external API endpoint to get posts.
+  // You can use any data fetching library
+  const sports = require("../data/sports.json");
+
+  // By returning { props: { posts } }, the Blog component
+  // will receive `posts` as a prop at build time
+  return {
+    props: {
+      sports,
+    },
+  };
+}
 
 export default Home;

@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Løping",
+        "mål": "5000 m",
+        "emoji": "🏃",
+        "marketing": "jobba"
+    },
+    {
+        "title": "Styrketrening",
+        "mål": "300 kcal",
+        "emoji": "🏋️‍♀️",
+        "marketing": "jobba"
+    },
+    {
+        "title": "Squash",
+        "mål": "400 kcal",
+        "emoji": "🥒",
+        "marketing": "jobba"
+    },
+    {
+        "title": "Svømming",
+        "mål": "1000 m",
+        "emoji": "🏊‍♀️",
+        "marketing": "jobba"
+    },
+    {
+        "title": "Minigolf",
+        "mål": "18 hull",
+        "emoji": "🏌️",
+        "marketing": "jobba"
+    }
+]
