@@ -19,12 +19,13 @@ const Home: NextPage<{ sports: Sport[] }> = ({ sports }) => {
         <meta name="description" content="Don't forget to work out!" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-white h-screen">
+      <main className="h-screen">
         <h1>Fem sporter på én dag</h1>
         <h4>Random sports</h4>
         {randomSports.map((sport) => (
-          <div>{sport.title}</div>
+          <div key={sport.id}>{sport.title}</div>
         ))}
+
         <br />
         {sports &&
           sports.map((sport) => <SportCard key={sport.id} sport={sport} />)}
