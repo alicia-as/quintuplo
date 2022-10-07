@@ -59,7 +59,7 @@ const Home: NextPage<{ sports: Sport[] }> = ({ sports }) => {
                     </div>
                     <div className={styles.goalExplainerBoxElement}>Mål:</div>
                     <div className={styles.goalExplainerBoxElement}>
-                      {sport.mål}
+                      {sport.target}
                     </div>
                   </div>
 

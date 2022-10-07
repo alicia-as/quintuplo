@@ -1,7 +1,10 @@
+import { Person } from "./person";
+
 export interface Sport {
   id: number;
   title: string;
-  mål: string;
+  target: string;
   emoji: string;
-  marketing: string;
+  marketing: null;
+  participants: Person[];
 }

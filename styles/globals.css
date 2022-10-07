@@ -1,3 +1,34 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-4xl py-3 font-semibold;
+  }
+  h2 {
+    @apply text-3xl py-2 font-semibold;
+  }
+  h3 {
+    @apply text-2xl py-1 font-semibold;
+  }
+
+  button {
+    @apply text-lg;
+    @apply rounded-2xl;
+    @apply font-semibold;
+  }
+  body {
+    background: black;
+    color: white;
+  }
+}
+
+@layer components {
+  .card {
+    background-color: theme("colors.gray-dark");
+    border-radius: theme("borderRadius.2xl");
+    padding: theme("spacing.4");
+    box-shadow: theme("boxShadow.xl");
+  }
+}
