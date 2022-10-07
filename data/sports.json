@@ -59,5 +59,265 @@
     "marketing": null,
     "likelihood": 3,
     "isFinalOnly": true
+  },
+  {
+    "id": 6,
+    "title": "Bordtennis",
+    "target": {
+      "easy": "300 kcal",
+      "medium": "400 kcal",
+      "hard": "500 kcal"
+    },
+    "emoji": "🏓",
+    "marketing": null,
+    "likelihood": 4,
+    "isFinalOnly": false
+  }
+  {
+    "id": 7,
+    "title": Klatring,
+    "target": {
+      "easy": "400 kcal",
+      "medium": "500 kcal",
+      "hard": "600 kcal"
+    },
+    "emoji": "🧗🏼‍♀️",
+    "marketing": null,
+    "likelihood": 5,
+    "isFinalOnly": false
+  },
+  {
+    "id": 8,
+    "title": "Sykling",
+    "target": {
+      "easy": "5 km",
+      "medium": "10 km",
+      "hard": "20 km"
+    },
+    "emoji": "🚴‍♀️",
+    "marketing": null,
+    "likelihood": 3,
+    "isFinalOnly": false
+  },
+  {
+    "id": 9,
+    "title": "Yoga",
+    "target": {
+      "easy": "300 kcal",
+      "medium": "400 kcal",
+      "hard": "500 kcal"
+    },
+    "emoji": "🧘🏼",
+    "marketing": null,
+    "likelihood": 2,
+    "isFinalOnly": false
+  },
+  {
+    "id": 10,
+    "title": "Alpin",
+    "target": {
+      "easy": "500 kcal",
+      "medium": "700 kcal",
+      "hard": "900 kcal"
+    },
+    "emoji": "⛷",
+    "marketing": null,
+    "likelihood": 2,
+    "isFinalOnly": false
+  },
+  {
+    "id": 11,
+    "title": "Padeltennis",
+    "target": {
+      "easy": "300 kcal",
+      "medium": "400 kcal",
+      "hard": "500 kcal"
+    },
+    "emoji": "🎾",
+    "marketing": null,
+    "likelihood": 7,
+    "isFinalOnly": false
+  },
+  {
+    "id": 12,
+    "title": "Crossfit",
+    "target": {
+      "easy": "20 min AMRAP",
+      "medium": "30 min AMRAP",
+      "hard": "45 min AMRAP"
+    },
+    "emoji": "🙅",
+    "marketing": null,
+    "likelihood": 3,
+    "isFinalOnly": false
+  },
+  {
+    "id": 13,
+    "title": "Fotball",
+    "target": {
+      "easy": "400 kcal",
+      "medium": "500 kcal",
+      "hard": "700 kcal"
+    },
+    "emoji": "⚽️",
+    "marketing": null,
+    "likelihood": 3,
+    "isFinalOnly": false
+  },
+  {
+    "id": 14,
+    "title": "Dart",
+    "target": {
+      "easy": ">500 poeng",
+      "medium": ">750 poeng",
+      "hard": ">1500 poeng"
+    },
+    "emoji": "🎯",
+    "marketing": null,
+    "likelihood": 7,
+    "isFinalOnly": true
+  },
+  {
+    "id": 15,
+    "title": "Biljard",
+    "target": {
+      "easy": "1 win",
+      "medium": "2 wins",
+      "hard": "3 wins"
+    },
+    "emoji": "🎱",
+    "marketing": null,
+    "likelihood": 7,
+    "isFinalOnly": true
+  },
+  {
+    "id": 16,
+    "title": "Shuffleboard",
+    "target": {
+      "easy": "15 points",
+      "medium": "30 points",
+      "hard": "50 points"
+    },
+    "emoji": "🥌",
+    "marketing": null,
+    "likelihood": 5,
+    "isFinalOnly": true
+  },
+  {
+    "id": 17,
+    "title": "Bowling",
+    "target": {
+      "easy": "2 spare / 1 strike",
+      "medium": "1 spare & 1 strike",
+      "hard": "2 strikes"
+    },
+    "emoji": "🎳",
+    "marketing": null,
+    "likelihood": 7,
+    "isFinalOnly": true
+  },
+  {
+    "id": 18,
+    "title": "Trappeløp",
+    "target": {
+      "easy": "200 trappetrinn",
+      "medium": "300 trappetrinn",
+      "hard": "500 trappetrinn"
+    },
+    "emoji": "👟",
+    "marketing": null,
+    "likelihood": 3,
+    "isFinalOnly": false
+  },
+  {
+    "id": 19,
+    "title": "Basketball",
+    "target": {
+      "easy": "300 kcal",
+      "medium": "400 kcal",
+      "hard": "500 kcal"
+    },
+    "emoji": "🏀",
+    "marketing": null,
+    "likelihood": 2,
+    "isFinalOnly": false
+  },
+  {
+    "id": 20,
+    "title": "Langrenn",
+    "target": {
+      "easy": "5 km",
+      "medium": "8 km",
+      "hard": "15 km"
+    },
+    "emoji": "🎿",
+    "marketing": null,
+    "likelihood": 1,
+    "isFinalOnly": false
+  },
+  {
+    "id": 21,
+    "title": "Frisbeegolf",
+    "target": {
+      "easy": "9 hull",
+      "medium": "12 hull",
+      "hard": "18 hull"
+    },
+    "emoji": "🥏",
+    "marketing": null,
+    "likelihood": 5,
+    "isFinalOnly": false
+  },
+  {
+    "id": 22,
+    "title": "Volleyball",
+    "target": {
+      "easy": "300 kcal",
+      "medium": "400 kcal",
+      "hard": "500 kcal"
+    },
+    "emoji": "🏐",
+    "marketing": null,
+    "likelihood": 4,
+    "isFinalOnly": false
+  },
+  {
+    "id": 23,
+    "title": "Badminton",
+    "target": {
+      "easy": "400 kcal",
+      "medium": "500 kcal",
+      "hard": "600 kcal"
+    },
+    "emoji": "🏸",
+    "marketing": null,
+    "likelihood": 4,
+    "isFinalOnly": false
+  },
+  {
+    "id": 24,
+    "title": "Roing",
+    "target": {
+      "easy": "300 kcal",
+      "medium": "400 kcal",
+      "hard": "500 kcal"
+    },
+    "emoji": "🚣🏻‍♀️",
+    "marketing": null,
+    "likelihood": 3,
+    "isFinalOnly": false
+  },
+  {
+    "id": 25,
+    "title": "Gokart",
+    "target": {
+      "easy": "10 laps",
+      "medium": "20 laps",
+      "hard": "30 laps"
+    },
+    "emoji": "🏁",
+    "marketing": null,
+    "likelihood": 4,
+    "isFinalOnly": true
   }
 ]
