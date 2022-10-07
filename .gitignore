@@ -81,6 +81,7 @@ fabric.properties
 logs
 **/*.backup.*
 **/*.back.*
+.next
 
 node_modules
 bower_components
