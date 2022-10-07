@@ -1,37 +1,63 @@
 [
-    {
-        "id": 1,
-        "title": "Løping",
-        "mål": "5000 m",
-        "emoji": "🏃",
-        "marketing": null
+  {
+    "id": 1,
+    "title": "Løping",
+    "target": {
+      "easy": "3000 m",
+      "medium": "5000 m",
+      "hard": "10000 m"
     },
-    {
-        "id": 2,
-        "title": "Styrketrening",
-        "mål": "300 kcal",
-        "emoji": "🏋️‍♀️",
-        "marketing": null
+    "emoji": "🏃",
+    "marketing": null,
+    "likelihood": 9
+  },
+  {
+    "id": 2,
+    "title": "Styrketrening",
+    "target": {
+      "easy": "300 kcal",
+      "medium": "500 kcal",
+      "hard": "700 kcal"
     },
-    {
-        "id": 3,
-        "title": "Squash",
-        "mål": "400 kcal",
-        "emoji": "🥒",
-        "marketing": null
+    "emoji": "🏋️‍♀️",
+    "marketing": null,
+    "likelihood": 8
+  },
+  {
+    "id": 3,
+    "title": "Squash",
+    "target": {
+      "easy": "300 kcal",
+      "medium": "400 kcal",
+      "hard": "500 kcal"
     },
-    {
-        "id": 4,
-        "title": "Svømming",
-        "mål": "1000 m",
-        "emoji": "🏊‍♀️",
-        "marketing": null
+    "emoji": "🥒",
+    "marketing": null,
+    "likelihood": 6
+  },
+  {
+    "id": 4,
+    "title": "Svømming",
+    "target": {
+      "easy": "1000 m",
+      "medium": "1500 m",
+      "hard": "2000 m"
     },
-    {
-        "id": 5,
-        "title": "Minigolf",
-        "mål": "18 hull",
-        "emoji": "🏌️",
-        "marketing": null
-    }
+    "emoji": "🏊‍♀️",
+    "marketing": null,
+    "likelihood": 6
+  },
+  {
+    "id": 5,
+    "title": "Minigolf",
+    "target": {
+      "easy": "18 hull",
+      "medium": "18 hull",
+      "hard": "18 hull"
+    },
+    "emoji": "🏌️",
+    "marketing": null,
+    "likelihood": 3,
+    "isFinalOnly": true
+  }
 ]
