@@ -72,10 +72,10 @@
     "marketing": null,
     "likelihood": 4,
     "isFinalOnly": false
-  }
+  },
   {
     "id": 7,
-    "title": Klatring,
+    "title": "Klatring",
     "target": {
       "easy": "400 kcal",
       "medium": "500 kcal",

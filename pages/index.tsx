@@ -28,57 +28,7 @@ const Home: NextPage<{ sports: Sport[] }> = ({ sports }) => {
         <h1>Fem sporter på én dag</h1>
       </body>
 
-<<<<<<< HEAD
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Velkommen til septembers <br /> <a href="/quintuplo">Quintuplo</a>!
-        </h1>
-
-        <p className={styles.description}>Månedens sporter er...</p>
-
-        <button
-          className={styles.button}
-          onClick={() => {
-            setIsClicked(!isClicked);
-            setNumberOfSports(1);
-          }}
-        >
-          Generer quintuplo
-        </button>
-
-        <div className={styles.grid}>
-          {isClicked &&
-            sports.slice(0, numberOfSports).map((sport) => {
-              return (
-                <a
-                  href={`https://google.com/search?q=${sport.title}`}
-                  className={styles.card}
-                  key={sport.id}
-                >
-                  <h2>{sport.title} &rarr;</h2>
-                  <div className={styles.goalExplainerBox}>
-                    <div className={styles.goalExplainerBoxElement}>
-                      {sport.emoji}
-                    </div>
-                    <div className={styles.goalExplainerBoxElement}>Mål:</div>
-                    <div className={styles.goalExplainerBoxElement}>
-                      {sport.target}
-                    </div>
-                  </div>
-
-                  <p>{sport.marketing}</p>
-                </a>
-              );
-            })}
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        Powered by Smauet Technology Group
-      </footer>
-=======
       <footer className="">Powered by Smauet Technology Group</footer>
->>>>>>> 626ef62b5983bba86ca11f0c3b1736658f95e8d9
     </div>
   );
 };
