@@ -1,6 +1,4 @@
-import { Person } from "../types/person";
-
-const Participants = {
+const Participants: any = {
   Mis: {
     firstName: "Mathias",
     lastName: "Breistein",

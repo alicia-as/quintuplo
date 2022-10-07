@@ -1,8 +1,8 @@
-import { Sport } from './../../types/sports';
+import { Sport } from "./../../types/sports";
 import { Person } from "../../types/person";
 import Participans from "../participants";
 
-export const sports: Sport[] = [
+export const sports = [
   {
     id: 1,
     title: "Løping",

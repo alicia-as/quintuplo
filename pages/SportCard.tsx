@@ -30,8 +30,8 @@ const SportCard = ({
     >
       {/* {sport.title} */}
       <div className="flex flex-col items-center align-center">
-        <div className="text-5xl">{sport.emoji}</div>
-        <div className="text-xl">{sport.title}</div>
+        <div className="text-5xl">{sport?.emoji}</div>
+        <div className="text-xl">{sport?.title}</div>
       </div>
     </div>
   );

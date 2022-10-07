@@ -4,7 +4,7 @@ import Participants from "../../data/participants";
 import { Person } from "../../types/person";
 import { Sport } from "../../types/sports";
 
-const getFinishers = (participants: Person[], sports: Sport[]) => {
+const getFinishers = (participants: Person[], sports: any[]) => {
   return [Participants.Mis, Participants.Jokke, Participants.Drønk];
 };
 
