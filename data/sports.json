@@ -309,13 +309,13 @@
   },
   {
     "id": 25,
-    "title": "Gokart",
+    "title": "Gaming",
     "target": {
       "easy": "10 laps",
       "medium": "20 laps",
       "hard": "30 laps"
     },
-    "emoji": "🏁",
+    "emoji": "🖥",
     "marketing": null,
     "likelihood": 4,
     "isFinalOnly": true
