@@ -244,13 +244,13 @@
   },
   {
     "id": 20,
-    "title": "Langrenn",
+    "title": "Tennis",
     "target": {
-      "easy": "5 km",
-      "medium": "8 km",
-      "hard": "15 km"
+      "easy": "400 kcal",
+      "medium": "500 kcal",
+      "hard": "600 kcal"
     },
-    "emoji": "🎿",
+    "emoji": "🎾",
     "marketing": null,
     "likelihood": 1,
     "isFinalOnly": false
