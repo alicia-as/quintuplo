@@ -114,13 +114,13 @@
   },
   {
     "id": 10,
-    "title": "Alpin",
+    "title": "Curling",
     "target": {
-      "easy": "500 kcal",
-      "medium": "700 kcal",
-      "hard": "900 kcal"
+      "easy": "3 poeng",
+      "medium": "5 poeng",
+      "hard": "7 poeng"
     },
-    "emoji": "⛷",
+    "emoji": "🥌",
     "marketing": null,
     "likelihood": 2,
     "isFinalOnly": false

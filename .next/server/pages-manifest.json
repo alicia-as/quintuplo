@@ -1,6 +1,11 @@
 {
   "/_app": "pages/_app.js",
+  "/2022/september": "pages/2022/september.html",
+  "/SportCard": "pages/SportCard.html",
+  "/api/hello": "pages/api/hello.js",
+  "/quintuplo": "pages/quintuplo.html",
   "/_error": "pages/_error.js",
+  "/": "pages/index.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js"
+  "/404": "pages/404.html"
 }
