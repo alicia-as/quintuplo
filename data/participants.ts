@@ -14,7 +14,7 @@ const Participants: any = {
   Drønk: {
     firstName: "Mads",
     lastName: "Roseth",
-    nickname: "Drønk",
+    nickname: "Nazi-Drønk Snaiesen",
     age: 26,
   },
   Nussegnageren: {
