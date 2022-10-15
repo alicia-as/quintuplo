@@ -31,7 +31,7 @@ const Home: NextPage<{ sports: Sport[] }> = ({ sports }) => {
           </button>
         </div>
 
-        <div className="justify-items-center grid grid-cols-5 grid-rows-5 p-20">
+        <div className="justify-items-center grid grid-cols-5 grid-rows-5 p-10 md:grid-cols-6">
           {sports &&
             sports.map((sport, index) => (
               <SportCard

@@ -24,14 +24,13 @@ const SportCard = ({
 
   return (
     <div
-      className={`flex w-40 h-40 border m-4 ${
+      className={`flex w-40 h-40 border m-4 md:w-21 md:h-21 ${
         isSelected && shouldDisplay ? "bg-white text-bold text-[#000]" : ""
       } rounded-full justify-center items-center`}
     >
-      {/* {sport.title} */}
       <div className="flex flex-col items-center align-center">
-        <div className="text-5xl">{sport?.emoji}</div>
-        <div className="text-xl">{sport?.title}</div>
+        <div className="text-5xl md:text-3xl">{sport?.emoji}</div>
+        <div className="text-xl md:text-base">{sport?.title}</div>
       </div>
     </div>
   );
