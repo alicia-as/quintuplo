@@ -23,12 +23,3 @@
     color: white;
   }
 }
-
-@layer components {
-  .card {
-    background-color: theme("colors.gray-dark");
-    border-radius: theme("borderRadius.2xl");
-    padding: theme("spacing.4");
-    box-shadow: theme("boxShadow.xl");
-  }
-}

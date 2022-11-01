@@ -21,13 +21,18 @@ const Home: NextPage<{ sports: Sport[] }> = ({ sports }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="h-screen">
-        <div className="flex justify-evenly w-screen ">
+        <div className="flex justify-evenly w-screen p-4">
           <button
-            type="button"
-            className="mt-12 text-4xl inline-flex justify-center rounded-xl border border-transparent bg-[#222] px-6 py-4 font-medium text-white hover:bg-[#444] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#888] focus-visible:ring-offset-2"
+            className="text-sm md:text-xl p-2 mx-2 bg-blue-800"
             onClick={() => setGenerate(true)}
           >
-            Generer quintuplo
+            Generer tilfeldig quintuplo
+          </button>
+          <button
+            className="text-sm md:text-xl p-2 bg-red-800"
+            onClick={() => setGenerate(true)}
+          >
+            Generer månedens quintuplo
           </button>
         </div>
 
