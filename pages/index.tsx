@@ -4,10 +4,15 @@ import { useEffect, useState } from "react";
 import SportCard from "./SportCard";
 import { Sport } from "../types/sports";
 import { generateRandomSports } from "../utils/helpers";
+import DifficultyChooser from "../components/DifficultyChooser";
+
+export type Difficulty = "easy" | "medium" | "hard";
 
 const Home: NextPage<{ sports: Sport[] }> = ({ sports }) => {
   const [randomSports, setRandomSports] = useState<Sport[]>(sports);
   const [generate, setGenerate] = useState<boolean>(false);
+
+  const [difficulty, setDifficulty] = useState<Difficulty>("medium");
 
   useEffect(() => {
     setRandomSports(generateRandomSports(sports, 5));
@@ -36,6 +41,14 @@ const Home: NextPage<{ sports: Sport[] }> = ({ sports }) => {
           </button>
         </div>
 
+        <div className="flex flex-col md:flex-row justify-center items-center">
+          <div>
+            <DifficultyChooser
+              difficulty={difficulty}
+              setDifficulty={setDifficulty}
+            />
+          </div>
+        </div>
         <div className="justify-items-center grid grid-cols-5 grid-rows-5 p-10 md:grid-cols-6">
           {sports &&
             sports.map((sport, index) => (
