@@ -1,11 +1,18 @@
 import { Sport } from "../types/sports";
+import seedrandom from "seedrandom";
 
 export const generateRandomSports = (
   sports: Sport[],
-  numberOfSports: number
+  numberOfSports: number,
+  useSeed: boolean = false
 ): Sport[] => {
   // Create a list multiplying the sports by their likelihood
   // Shuffle the list and pick the first `numberOfSports` unique items
+
+  if (useSeed) {
+    seedrandom("hello", { global: true });
+  }
+
   const sportsList: Sport[] = sports
     .filter((sport) => !sport.isFinalOnly)
     .flatMap((sport) => Array(sport.likelihood).fill(sport))

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { RadioGroup } from "@headlessui/react";
 import { Difficulty } from "../pages";
+import { Radio } from "@material-tailwind/react";
 
 const DifficultyChooser = ({
   difficulty,
@@ -10,30 +11,29 @@ const DifficultyChooser = ({
   setDifficulty: (difficulty: Difficulty) => void;
 }) => {
   return (
-    <RadioGroup
-      value={difficulty}
-      onChange={setDifficulty}
-      className="flex flex-row w-full justify-between"
-    >
-      <RadioGroup.Label>Plan</RadioGroup.Label>
-      <div>
-        <RadioGroup.Option value="easy">
-          {({ checked }) => (
-            <span className={checked ? "bg-blue-200" : ""}>Lett</span>
-          )}
-        </RadioGroup.Option>
-        <RadioGroup.Option value="medium">
-          {({ checked }) => (
-            <span className={checked ? "bg-blue-200" : ""}>Middels</span>
-          )}
-        </RadioGroup.Option>
-        <RadioGroup.Option value="hard">
-          {({ checked }) => (
-            <span className={checked ? "bg-blue-200" : ""}>Vanskelig</span>
-          )}
-        </RadioGroup.Option>
-      </div>
-    </RadioGroup>
+    <div className="flex flex-row align-center gap-20 justify-center items-center m-4 text-center">
+      <Radio
+        id="easy"
+        name="type"
+        label="Lett"
+        checked={difficulty === "easy"}
+        onChange={() => setDifficulty("easy")}
+      />
+      <Radio
+        id="medium"
+        name="type"
+        label="Middels"
+        checked={difficulty === "medium"}
+        onChange={() => setDifficulty("medium")}
+      />
+      <Radio
+        id="hard"
+        name="type"
+        label="Vanskelig"
+        checked={difficulty === "hard"}
+        onChange={() => setDifficulty("hard")}
+      />
+    </div>
   );
 };
 

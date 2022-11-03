@@ -1,29 +1,34 @@
 import { useRef, useState } from "react";
 import { Sport } from "../types/sports";
 import { useHover } from "usehooks-ts";
+import { Difficulty } from ".";
 
 const SportCard = ({
   sport,
   isSelected,
   timeout,
   index,
+  difficulty,
 }: {
   sport: Sport;
   isSelected: boolean;
   timeout: number;
   index: number;
+  difficulty: Difficulty;
 }) => {
   const [shouldDisplay, setShouldDisplay] = useState(false);
 
   const hoverRef = useRef(null);
   const isHover = useHover(hoverRef);
 
+  const timeOutInterval = 0;
+
   if (isSelected) {
-    console.log("My name is " + sport.title + " and my index is: " + index);
+    // console.log("My name is " + sport.title + " and my index is: " + index);
     const myTimeout = setTimeout(() => {
       setShouldDisplay(true);
       clearTimeout(myTimeout);
-    }, timeout + index * 1500);
+    }, timeout + index * timeOutInterval);
   }
 
   return (
@@ -38,7 +43,7 @@ const SportCard = ({
       {isHover && (
         <div className="absolute top-0 bg-white z-10 flex flex-col justify-center items-center text-gray-800 rounded-lg p-4">
           <h1 className="text-2xl">{sport.title}</h1>
-          <p className="text-sm">{sport.target.medium}</p>
+          <p className="text-sm">{sport.target[difficulty]}</p>
         </div>
       )}
       <div className="flex flex-col items-center align-center">

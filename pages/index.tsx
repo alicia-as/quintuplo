@@ -8,15 +8,33 @@ import DifficultyChooser from "../components/DifficultyChooser";
 
 export type Difficulty = "easy" | "medium" | "hard";
 
+export type GenerateType = "random" | "monthly" | null;
+
 const Home: NextPage<{ sports: Sport[] }> = ({ sports }) => {
-  const [randomSports, setRandomSports] = useState<Sport[]>(sports);
-  const [generate, setGenerate] = useState<boolean>(false);
+  const [randomSports, setRandomSports] = useState<Sport[]>([]);
+
+  useEffect(() => {
+    const randomSports = sports.sort(() => Math.random() - 0.5);
+    setRandomSports(randomSports);
+  }, [sports]);
+
+  const [selectedSports, setSelectedSports] = useState<Sport[]>([]);
+  const [generate, setGenerate] = useState<GenerateType>(null);
 
   const [difficulty, setDifficulty] = useState<Difficulty>("medium");
 
   useEffect(() => {
-    setRandomSports(generateRandomSports(sports, 5));
-  }, [sports]);
+    switch (generate) {
+      case "random":
+        setSelectedSports(generateRandomSports(sports, 5));
+        break;
+      case "monthly":
+        setSelectedSports(generateRandomSports(sports, 5, true));
+        break;
+      default:
+        setSelectedSports([]);
+    }
+  }, [generate]);
 
   return (
     <div>
@@ -26,38 +44,42 @@ const Home: NextPage<{ sports: Sport[] }> = ({ sports }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="h-screen">
-        <div className="flex justify-evenly w-screen p-4">
+        <div className="flex flex-col justify-center items-center w-screen p-4">
           <button
-            className="text-sm md:text-xl p-2 mx-2 bg-blue-800"
-            onClick={() => setGenerate(true)}
+            className="text-sm max-w-screen-sm md:text-xl p-2 mx-2 bg-blue-800"
+            onClick={() => {
+              setGenerate(null);
+              setGenerate("random");
+            }}
           >
             Generer tilfeldig quintuplo
           </button>
-          <button
+          {/* <button
             className="text-sm md:text-xl p-2 bg-red-800"
-            onClick={() => setGenerate(true)}
+            onClick={() => {
+              setGenerate(null);
+              setGenerate("monthly");
+            }}
           >
             Generer månedens quintuplo
-          </button>
+          </button> */}
+
+          <DifficultyChooser
+            difficulty={difficulty}
+            setDifficulty={setDifficulty}
+          />
         </div>
 
-        <div className="flex flex-col md:flex-row justify-center items-center">
-          <div>
-            <DifficultyChooser
-              difficulty={difficulty}
-              setDifficulty={setDifficulty}
-            />
-          </div>
-        </div>
         <div className="justify-items-center grid grid-cols-5 grid-rows-5 p-10 md:grid-cols-6">
-          {sports &&
-            sports.map((sport, index) => (
+          {randomSports &&
+            randomSports.map((sport, index) => (
               <SportCard
                 key={sport.id}
                 sport={sport}
-                isSelected={generate && randomSports.includes(sport)}
-                timeout={2000}
-                index={randomSports.indexOf(sport) + 1}
+                isSelected={generate !== null && selectedSports.includes(sport)}
+                timeout={0}
+                index={sports.indexOf(sport) + 1}
+                difficulty={difficulty}
               />
             ))}
         </div>
@@ -73,9 +95,9 @@ const Home: NextPage<{ sports: Sport[] }> = ({ sports }) => {
 export async function getServerSideProps() {
   // Call an external API endpoint to get posts.
   // You can use any data fetching library
-  const boringSports = require("../data/sports.json");
-  const sports = boringSports.sort(() => Math.random() - 0.5);
-  // const sortedSports = sports.sort(() => (Math.random() > 0.5 ? 1 : -1));
+
+  const sports = require("../data/sports.json");
+
   return {
     props: {
       sports,
