@@ -11,7 +11,7 @@ const DifficultyChooser = ({
   setDifficulty: (difficulty: Difficulty) => void;
 }) => {
   return (
-    <div className="flex flex-row align-center gap-20 justify-center items-center m-4 text-center">
+    <div className="flex flex-row items-center gap-20 m-4">
       <Radio
         id="easy"
         name="type"

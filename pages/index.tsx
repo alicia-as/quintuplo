@@ -70,6 +70,20 @@ const Home: NextPage<{ sports: Sport[] }> = ({ sports }) => {
           />
         </div>
 
+        <div className="flex w-full items-center justify-evenly">
+          {selectedSports.map((sport, index) => (
+            <SportCard
+              key={sport.title}
+              sport={sport}
+              isSelected={true}
+              timeout={1000}
+              index={index}
+              difficulty={difficulty}
+              includeEffort={true}
+            />
+          ))}
+        </div>
+
         <div className="justify-items-center grid grid-cols-5 grid-rows-5 p-10 md:grid-cols-6">
           {randomSports &&
             randomSports.map((sport, index) => (
@@ -80,6 +94,7 @@ const Home: NextPage<{ sports: Sport[] }> = ({ sports }) => {
                 timeout={0}
                 index={sports.indexOf(sport) + 1}
                 difficulty={difficulty}
+                includeEffort={false}
               />
             ))}
         </div>
