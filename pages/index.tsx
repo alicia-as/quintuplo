@@ -43,7 +43,7 @@ const Home: NextPage<{ sports: Sport[] }> = ({ sports }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="h-screen">
-        <div className="flex flex-col justify-center items-center w-screen p-4">
+        <div className="flex flex-col justify-center items-center ">
           <button
             className="text-sm max-w-screen-sm md:text-xl p-2 mx-2 bg-blue-800"
             onClick={() => {
@@ -53,15 +53,6 @@ const Home: NextPage<{ sports: Sport[] }> = ({ sports }) => {
           >
             Generer tilfeldig quintuplo
           </button>
-          {/* <button
-            className="text-sm md:text-xl p-2 bg-red-800"
-            onClick={() => {
-              setGenerate(null);
-              setGenerate("monthly");
-            }}
-          >
-            Generer månedens quintuplo
-          </button> */}
 
           <DifficultyChooser
             difficulty={difficulty}

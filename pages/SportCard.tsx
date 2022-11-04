@@ -37,7 +37,7 @@ const SportCard = ({
     <div>
       <div
         ref={hoverRef}
-        className={`flex md:w-32 md:h-32 cursor-pointer md:border m-4 md:rounded-full  relative
+        className={`flex md:w-24 md:h-24 cursor-pointer md:border m-4 md:rounded-full  relative
       ${
         isSelected && shouldDisplay ? "bg-white text-bold text-[#000]" : ""
       } justify-center items-center
@@ -51,7 +51,7 @@ const SportCard = ({
         )}
         <div className="flex flex-col items-center align-center">
           <div className="text-xl md:text-3xl">{sport?.emoji}</div>
-          <div className="hidden md:block text-md md:text-lg">
+          <div className="hidden md:block text-md md:text-xs font-medium">
             {sport?.title}
           </div>
         </div>
