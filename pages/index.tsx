@@ -62,12 +62,7 @@ const Home: NextPage<{ sports: Sport[] }> = ({ sports }) => {
   };
 
   const generateTimeOut = (index: number) => {
-    if (
-      isSelectedSportIndex(index) &&
-      !visitedSports.includes(randomSports[index])
-    ) {
-      return 5000;
-    } else if (visitedSports.length === 5) {
+    if (visitedSports.length === 5) {
       return null;
     } else {
       return 1000;

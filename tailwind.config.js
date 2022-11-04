@@ -7,6 +7,15 @@ module.exports = {
   plugins: [],
   theme: {
     extend: {
+      keyframes: {
+        grow: {
+          "0%, 100%": { transform: "scale(0)" },
+          "50%": { transform: "scale(1)" },
+        },
+      },
+      transitionProperty: {
+        grow: "grow 3s ease-in-out",
+      },
       spacing: {
         128: "32rem",
         144: "36rem",

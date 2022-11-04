@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { Sport } from "../types/sports";
-import { useHover } from "usehooks-ts";
+import { useHover, useTimeout } from "usehooks-ts";
 import { Difficulty } from ".";
 
 const SportCard = ({
@@ -31,20 +31,27 @@ const SportCard = ({
     }, timeout);
   }
 
+  const [isFresh, setIsFresh] = useState(true);
+  useTimeout(() => {
+    setIsFresh(false);
+  }, 1000);
+
   return (
     <div>
       <div
         ref={hoverRef}
         className={`flex ${
           includeEffort
-            ? "md:w-28 md:h-28 transition ease-in-out delay-150"
+            ? `${
+                isFresh ? "md:w-2 md:h-2" : "md:w-28 md:h-28"
+              } duration-700 ease-in-out`
             : "md:w-24 md:h-24"
         }  cursor-pointer m-4 rounded-full relative duration-500 ${
-          isHighlighted ? "md:border-4 border-2" : "md:border"
+          isHighlighted ? "md:border-8 border-2 md:w-32 md:h-32" : "md:border"
         }
       ${
         isSelected && shouldDisplay
-          ? "border w-8 h-8 bg-white text-bold text-[#000]"
+          ? "border w-8 h-8 bg-white text-bold text-black transition duration-1000 "
           : ""
       } justify-center items-center
       `}
@@ -59,7 +66,7 @@ const SportCard = ({
       </div>
       {includeEffort && (
         <div className="flex justify-center">
-          <p className="text-xs md:text-md font-bold text-white">
+          <p className="text-xs max-w-[60px] text-center md:text-md font-bold text-white">
             {sport.target[difficulty]}
           </p>
         </div>
