@@ -70,8 +70,7 @@ const Home: NextPage<{ sports: Sport[] }> = ({ sports }) => {
     } else if (visitedSports.length === 5) {
       return null;
     } else {
-      // setCounter(Math.max(250, counter - 5));
-      return 400;
+      return 1000;
     }
   };
 
@@ -130,7 +129,7 @@ const Home: NextPage<{ sports: Sport[] }> = ({ sports }) => {
                 sport={sport}
                 isSelected={isSelected(sport)}
                 isHighlighted={generate !== null && index === randomIndex}
-                timeout={selectedSports.indexOf(sport) + 1 * 1000}
+                timeout={0}
                 difficulty={difficulty}
                 includeEffort={false}
               />
