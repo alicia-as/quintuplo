@@ -11,28 +11,34 @@ const DifficultyChooser = ({
   setDifficulty: (difficulty: Difficulty) => void;
 }) => {
   return (
-    <div className="flex flex-row items-center gap-20 m-4">
-      <Radio
-        id="easy"
-        name="type"
-        label="Lett"
-        checked={difficulty === "easy"}
-        onChange={() => setDifficulty("easy")}
-      />
-      <Radio
-        id="medium"
-        name="type"
-        label="Middels"
-        checked={difficulty === "medium"}
-        onChange={() => setDifficulty("medium")}
-      />
-      <Radio
-        id="hard"
-        name="type"
-        label="Vanskelig"
-        checked={difficulty === "hard"}
-        onChange={() => setDifficulty("hard")}
-      />
+    <div className="flex flex-row text-center items-center m-4 gap-4">
+      <div className="flex justify-center items-center ">
+        <Radio
+          id="easy"
+          name="type"
+          checked={difficulty === "easy"}
+          onChange={() => setDifficulty("easy")}
+        />
+        Lett
+      </div>
+      <div className="flex justify-center items-center ">
+        <Radio
+          id="medium"
+          name="type"
+          checked={difficulty === "medium"}
+          onChange={() => setDifficulty("medium")}
+        />
+        Medium
+      </div>
+      <div className="flex justify-center items-center ">
+        <Radio
+          id="hard"
+          name="type"
+          checked={difficulty === "hard"}
+          onChange={() => setDifficulty("hard")}
+        />
+        Vanskelig
+      </div>
     </div>
   );
 };
