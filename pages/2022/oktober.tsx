@@ -1,17 +1,17 @@
 import Completionists from "../../components/completionists";
-import { sports } from "../../data/2022/september";
+import { sports } from "../../data/2022/oktober";
 import Participants from "../../data/participants";
 import { Person } from "../../types/person";
 import { Sport } from "../../types/sports";
 
 const getFinishers = (participants: Person[], sports: any[]) => {
-  return [Participants.Mis, Participants.Jokke, Participants.Drønk];
+  return [Participants.Mis, Participants.Jokke, Participants.Nussegnageren];
 };
 
 const History = () => {
   return (
     <section className="p-4">
-      <h1 className="text-center pb-10">September 2022</h1>
+      <h1 className="text-center pb-10">Oktober 2022</h1>
       <div className="w-full h-full grid grid-cols-2 gap-20">
         <div className="w-full h-full flex flex-col items-end">
           {sports.map((sport) => (
@@ -33,7 +33,7 @@ const History = () => {
         <div className="justify-center content-center">
           <Completionists
             completionists={getFinishers(Participants, sports)}
-            month="September"
+            month="Oktober"
           />
         </div>
       </div>
