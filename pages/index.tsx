@@ -116,7 +116,7 @@ const Home: NextPage<{ sports: Sport[] }> = ({ sports }) => {
           ))}
         </div>
 
-        <div className="justify-items-center grid grid-cols-5 grid-rows-5 p-10 ">
+        <div className="justify-items-center grid grid-cols-5 grid-rows-5 p-10  md:gap-4">
           {randomSports &&
             randomSports.map((sport, index) => (
               <SportCard
