@@ -13,6 +13,7 @@
     "@material-tailwind/react": "^1.2.4",
     "@types/seedrandom": "^3.0.2",
     "next": "12.2.5",
+    "next-themes": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-transition-group": "^4.4.5",

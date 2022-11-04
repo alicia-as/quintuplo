@@ -20,7 +20,6 @@ const Home: NextPage<{ sports: Sport[] }> = ({ sports }) => {
 
   const [selectedSports, setSelectedSports] = useState<Sport[]>([]);
   const [generate, setGenerate] = useState<GenerateType>(null);
-
   const [difficulty, setDifficulty] = useState<Difficulty>("medium");
 
   useEffect(() => {
