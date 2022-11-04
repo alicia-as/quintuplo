@@ -43,21 +43,16 @@ const SportCard = ({
       } justify-center items-center
       `}
       >
-        {isHover && !includeEffort && (
-          <div className="absolute top-0 bg-white z-10 flex flex-col justify-center items-center text-gray-800 rounded-lg p-4">
-            <h1 className="text-2xl">{sport.title}</h1>
-            <p className="text-sm">{sport.target[difficulty]}</p>
-          </div>
-        )}
         <div className="flex flex-col items-center align-center">
           <div className="text-xl md:text-3xl">{sport?.emoji}</div>
           <div className="hidden md:block text-md md:text-xs font-medium">
             {sport?.title}
+            {isHover && !includeEffort && <p>{sport.target[difficulty]}</p>}
           </div>
         </div>
       </div>
       {includeEffort && (
-        <div className="text-center">
+        <div className="">
           <p className="text-sm font-medium text-white">
             {sport.target[difficulty]}
           </p>
