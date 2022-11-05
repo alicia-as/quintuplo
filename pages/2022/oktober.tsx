@@ -5,7 +5,7 @@ import { Person } from "../../types/person";
 import { Sport } from "../../types/sports";
 
 const getFinishers = (participants: Person[], sports: any[]) => {
-  return [Participants.Mis, Participants.Jokke, Participants.Nussegnageren];
+  return [Participants.Mis, Participants.Drønk, Participants.Nussegnageren];
 };
 
 const History = () => {
